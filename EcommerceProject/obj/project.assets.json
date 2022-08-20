@@ -8304,23 +8304,23 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\bebom\\.nuget\\packages\\": {},
+    "C:\\Users\\hp\\.nuget\\packages\\": {},
     "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\bebom\\OneDrive\\Desktop\\final\\EcommerceProject\\EcommerceProject.csproj",
+      "projectUniqueName": "D:\\iti\\final project\\final backend\\abobkrmoshmohm\\Ecommerce2 Api\\finalBE\\EcommerceProject\\EcommerceProject.csproj",
       "projectName": "EcommerceProject",
-      "projectPath": "C:\\Users\\bebom\\OneDrive\\Desktop\\final\\EcommerceProject\\EcommerceProject.csproj",
-      "packagesPath": "C:\\Users\\bebom\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\bebom\\OneDrive\\Desktop\\final\\EcommerceProject\\obj\\",
+      "projectPath": "D:\\iti\\final project\\final backend\\abobkrmoshmohm\\Ecommerce2 Api\\finalBE\\EcommerceProject\\EcommerceProject.csproj",
+      "packagesPath": "C:\\Users\\hp\\.nuget\\packages\\",
+      "outputPath": "D:\\iti\\final project\\final backend\\abobkrmoshmohm\\Ecommerce2 Api\\finalBE\\EcommerceProject\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
       ],
       "configFilePaths": [
-        "C:\\Users\\bebom\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\hp\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
