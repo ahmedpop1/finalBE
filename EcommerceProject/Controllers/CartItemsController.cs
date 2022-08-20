@@ -6,6 +6,7 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using EcommerceProject.models;
+using EcommerceProject.DTO;
 
 namespace EcommerceProject.Controllers
 {
@@ -125,7 +126,53 @@ namespace EcommerceProject.Controllers
             return NoContent();
         }
 
-        private bool CartItemsExists(int id)
+
+        [HttpPost("AddToCart")]
+        public async Task<ActionResult<CartItems>> PostCartItems(CartDTO CartDTO)
+        {
+            if (CartDTO.token=="") {return BadRequest(); }
+            string username= getusername(CartDTO.token);
+            if (username == "") { return BadRequest(); }
+            else {
+                int cartid = getcartnumber(username);
+                CartItems newitem= new CartItems() { CartId= cartid, productID= (int)CartDTO.prdId, Quantity =1};
+
+                _context.CartItems.Add(newitem);
+                try
+                {
+                    await _context.SaveChangesAsync();
+                }
+                catch (Exception)
+                {
+                   
+                        return Conflict();
+                    
+                  
+                }
+                return Ok();
+
+
+            }
+
+
+
+        }
+
+        private string getusername(string token  ) {
+
+            var user = _context.Users.FirstOrDefault(d => d.token == token);
+            if (user != null) { return user.email; }
+            return "";
+        }
+        private int getcartnumber(string username)
+        {
+            var cart = _context.Carts.FirstOrDefault(d=>d.username== username);
+            return cart.id;
+
+
+        }
+
+            private bool CartItemsExists(int id)
         {
             return _context.CartItems.Any(e => e.CartId == id);
         }

@@ -159,7 +159,7 @@ namespace EcommerceProject.Migrations
                     b.Property<int?>("totalProducts")
                         .HasColumnType("int");
 
-                    b.Property<int>("totalQuantity")
+                    b.Property<int?>("totalQuantity")
                         .HasColumnType("int");
 
                     b.Property<string>("username")

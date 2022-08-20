@@ -140,8 +140,10 @@ namespace EcommerceProject.Controllers
             savinguser.passwordHash = passwordHash;
             savinguser.passwordSalt = passwordSalt;
 
-            _context.Users.Add(savinguser);
 
+            _context.Users.Add(savinguser);
+            Cart usercart = new Cart() { username= inputuser.Email };
+            _context.Carts.Add(usercart);
             try
             {
                 await _context.SaveChangesAsync();
@@ -174,7 +176,10 @@ namespace EcommerceProject.Controllers
                 return Unauthorized("wrong password");
             }
             string token = CreateToken(user);
-            LoginRespondDTO respond = new LoginRespondDTO() { token =token,type= user.type };
+            user.token = token;
+            _context.Entry(user).State = EntityState.Modified;
+            _context.SaveChanges();
+            LoginRespondDTO respond = new LoginRespondDTO() { token =token,type= user.type, fullname = user.fullname };
 
             return Ok(respond);
         }

@@ -12,7 +12,7 @@ namespace EcommerceProject.models
         public decimal? totalPrice { get; set; }
         public decimal? discountedTotal { get; set; }
         public int? totalProducts { get; set; }
-        public int totalQuantity { get; set; }
+        public int? totalQuantity { get; set; }
         [JsonIgnore]
         public virtual ICollection<CartItems> Items { get; set; }
           = new HashSet<CartItems>();

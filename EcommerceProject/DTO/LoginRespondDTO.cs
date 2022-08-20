@@ -4,5 +4,6 @@
     {
       public string token { get; set; }
         public string type { get; set; }
+        public string? fullname { get; set; }
     }
 }
