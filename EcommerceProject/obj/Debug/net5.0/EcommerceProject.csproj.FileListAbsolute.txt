@@ -597,3 +597,13 @@ C:\Users\bebom\OneDrive\Desktop\ahmed\tryBE\EcommerceProject\obj\Debug\net5.0\re
 C:\Users\bebom\OneDrive\Desktop\ahmed\tryBE\EcommerceProject\bin\Debug\net5.0\FluentValidation.dll
 C:\Users\bebom\OneDrive\Desktop\ahmed\tryBE\EcommerceProject\bin\Debug\net5.0\FluentValidation.AspNetCore.dll
 C:\Users\bebom\OneDrive\Desktop\ahmed\tryBE\EcommerceProject\bin\Debug\net5.0\FluentValidation.DependencyInjectionExtensions.dll
+D:\iti\final project\final backend\abobkrmoshmohm\Ecommerce2 Api\finalBE\EcommerceProject\obj\Debug\net5.0\EcommerceProject.csproj.AssemblyReference.cache
+D:\iti\final project\final backend\abobkrmoshmohm\Ecommerce2 Api\finalBE\EcommerceProject\obj\Debug\net5.0\EcommerceProject.GeneratedMSBuildEditorConfig.editorconfig
+D:\iti\final project\final backend\abobkrmoshmohm\Ecommerce2 Api\finalBE\EcommerceProject\obj\Debug\net5.0\EcommerceProject.AssemblyInfoInputs.cache
+D:\iti\final project\final backend\abobkrmoshmohm\Ecommerce2 Api\finalBE\EcommerceProject\obj\Debug\net5.0\EcommerceProject.AssemblyInfo.cs
+D:\iti\final project\final backend\abobkrmoshmohm\Ecommerce2 Api\finalBE\EcommerceProject\obj\Debug\net5.0\EcommerceProject.csproj.CoreCompileInputs.cache
+D:\iti\final project\final backend\abobkrmoshmohm\Ecommerce2 Api\finalBE\EcommerceProject\obj\Debug\net5.0\EcommerceProject.MvcApplicationPartsAssemblyInfo.cs
+D:\iti\final project\final backend\abobkrmoshmohm\Ecommerce2 Api\finalBE\EcommerceProject\obj\Debug\net5.0\EcommerceProject.MvcApplicationPartsAssemblyInfo.cache
+D:\iti\final project\final backend\abobkrmoshmohm\Ecommerce2 Api\finalBE\EcommerceProject\obj\Debug\net5.0\EcommerceProject.dll
+D:\iti\final project\final backend\abobkrmoshmohm\Ecommerce2 Api\finalBE\EcommerceProject\obj\Debug\net5.0\refint\EcommerceProject.dll
+D:\iti\final project\final backend\abobkrmoshmohm\Ecommerce2 Api\finalBE\EcommerceProject\obj\Debug\net5.0\EcommerceProject.pdb
