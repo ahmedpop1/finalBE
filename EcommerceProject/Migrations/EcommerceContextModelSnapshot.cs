@@ -299,9 +299,6 @@ namespace EcommerceProject.Migrations
                     b.Property<string>("email")
                         .HasColumnType("nvarchar(450)");
 
-                    b.Property<string>("ImageName")
-                        .HasColumnType("nvarchar(100)");
-
                     b.Property<string>("address")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
@@ -309,6 +306,9 @@ namespace EcommerceProject.Migrations
                     b.Property<string>("fullname")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
+
+                    b.Property<byte[]>("image")
+                        .HasColumnType("varbinary(max)");
 
                     b.Property<bool?>("isloggedin")
                         .HasColumnType("bit");

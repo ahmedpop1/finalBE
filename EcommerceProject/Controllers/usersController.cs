@@ -135,7 +135,7 @@ namespace EcommerceProject.Controllers
             savinguser.fullname = inputuser.Name;
             savinguser.phonenumber = inputuser.PhoneNumber;
             savinguser.address = inputuser.Address;
-            savinguser.image = inputuser.Image;
+            //savinguser.image = inputuser.Image;
             savinguser.type = "user";
             savinguser.passwordHash = passwordHash;
             savinguser.passwordSalt = passwordSalt;
