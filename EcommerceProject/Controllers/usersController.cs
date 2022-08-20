@@ -83,7 +83,7 @@ namespace EcommerceProject.Controllers
         // POST: api/users
         // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
         [HttpPost]
-        public async Task<ActionResult<user>> Postuser(user user)
+        public async Task<ActionResult<user>> Postuser([FromBody] user user)
         {
             _context.Users.Add(user);
             try
@@ -124,7 +124,7 @@ namespace EcommerceProject.Controllers
 
 
         [HttpPost("Register")]
-        public async Task<ActionResult<user>> Registeruser(RegistrUserDto inputuser)
+        public async Task<ActionResult<user>> Registeruser([FromForm] RegistrUserDto inputuser)
 
         {
             CreatePasswordHash(inputuser.Password, out byte[] passwordHash, out byte[] passwordSalt);
@@ -135,7 +135,7 @@ namespace EcommerceProject.Controllers
             savinguser.fullname = inputuser.Name;
             savinguser.phonenumber = inputuser.PhoneNumber;
             savinguser.address = inputuser.Address;
-            savinguser.image = inputuser.Image;
+            //savinguser.image = inputuser.Image;
             savinguser.type = "user";
             savinguser.passwordHash = passwordHash;
             savinguser.passwordSalt = passwordSalt;
@@ -162,7 +162,7 @@ namespace EcommerceProject.Controllers
             return Ok(savinguser);
         }
         [HttpPost("Login")]
-        public async Task<ActionResult<string>> Login([FromBody] LoginUserDto request)
+        public async Task<ActionResult<string>> Login([FromForm] LoginUserDto request)
         {
             user user = _context.Users.FirstOrDefault(d => d.email == request.Email);
             if (user == null)
@@ -220,7 +220,48 @@ namespace EcommerceProject.Controllers
             }
         }
 
+        #region All Users
 
+
+        // /api/account/GetAllUsers
+        //[Authorize]
+        [HttpGet("GetUsers")]
+        public IActionResult GetAllUsers()
+        {
+            var url = HttpContext.Request;
+
+            if (ModelState.IsValid)
+            {
+                var users = from x in _context.Users
+                            select new user
+                            {
+                               fullname = x.fullname,
+                               email = x.email,
+                               passwordHash = x.passwordHash,
+                               passwordSalt = x.passwordSalt,
+                               phonenumber = x.phonenumber, 
+                               address  =   x.address,
+                               isloggedin = x.isloggedin,
+                               cart = x.cart,
+                               image = x.image,
+                               OrderDetials = x.OrderDetials,
+                               token = x.token,
+                               type = "user"
+
+                            };
+                return Ok(users);
+
+            }
+            else
+            {
+                return BadRequest(ModelState);
+            }
+
+
+
+
+        }
+        #endregion
 
         private bool userExists(string id)
         {
